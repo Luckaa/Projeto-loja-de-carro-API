@@ -12,7 +12,7 @@ class CarrosController {
         try {
             res.json(await Carros.find({}));
         } catch (error) {
-            res.status(400).send("Erro ao buscar Carros!!!");
+            res.status(400).send("Erro ao buscar Carros!");
         }
     }
 
