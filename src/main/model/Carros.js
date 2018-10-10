@@ -7,16 +7,10 @@ class Carros extends Mongoose.Schema {
     constructor() {
 
         super({
-
+            foto:{
+                type: String
+            },
             modelo: {
-                type: String
-            },
-
-            marca: {
-                type: String
-            },
-
-            combustivel: {
                 type: String
             },
 
@@ -24,23 +18,25 @@ class Carros extends Mongoose.Schema {
                 type: String
             },
 
-            preço: {
-                type: String
-            },
-            foto: {
-                type: String
-            },
-            
-            cor: {
-                type: String
-            },
-            telefonePContato: {
+            kilometragem: {
                 type: String
             },
 
-            emailPropostas: {
+            combustivel: {
                 type: String
             },
+
+            cor: {
+                type: String
+            },
+            conservacao: {
+                type: String
+            },
+            
+            obs: {
+                type: String
+            },
+       
         });
 
         Mongoose.model('Carros', this);

@@ -15,9 +15,6 @@ class CarrosController {
             res.status(400).send("Erro ao buscar Carros!");
         }
     }
-
-    
-
     static async adicionar(req, res) {
         try {
             res.json(await Carros.create(req.body));
