@@ -24,18 +24,22 @@ class CarrosController {
     }
     static async editar(req, res) {
         try {
-            res.json(await Carros.findByIdAndUpdate(req.body._id, req.body));
+
+            console.log("Editando id: " + req.body._id);
+            res.json(await Produto.findByIdAndUpdate(req.body._id, req.body));
         } catch (error) {
-            res.status(400).send("Erro ao atualizar Carros");
+            res.status(400).send("Erro ao atualizar Carro");
         }
     }
     static async remover(req, res) {
         try {
-            res.json(await Carros.findByIdAndRemove(req.body._id));
+            console.log("Removendo id: " + req.body._id);
+            res.json(await Produto.findByIdAndRemove(req.body._id));
         } catch (error) {
-            res.status(400).send("Erro ao remover Carros");
+            res.status(400).send("Erro ao remover Carro");
         }
     }
+
 
 
 }
