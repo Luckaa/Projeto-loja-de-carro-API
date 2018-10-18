@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const Cors = require("cors")
 const Config = require("../config.json");
 
-const CarrosRoute = require("./route/CarrosRoute");
+const CarroRoute = require("./route/CarroRoute");
 
 class App {
 
@@ -25,7 +25,7 @@ class App {
         }).then(e =>{console.log("conectou ao banco")});
 
         // Instanciando as rotas
-        new CarrosRoute(this.app);
+        new CarroRoute(this.app);
        
         this.app.get("/", (req, res, next) => {
             res.json({

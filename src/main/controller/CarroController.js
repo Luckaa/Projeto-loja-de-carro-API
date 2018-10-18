@@ -1,23 +1,23 @@
 'use strict';
 
-const CarrosModel = require("../model/Carros");
+const CarroModel = require("../model/Carro");
 const Mongoose = require("mongoose");
-const Carros = Mongoose.model("Carros");
+const Carro = Mongoose.model("Carro");
 
 
 
-class CarrosController {
+class CarroController {
 
     static async buscarTodos(req, res) {
         try {
-            res.json(await Carros.find({}));
+            res.json(await Carro.find({}));
         } catch (error) {
             res.status(400).send("Erro ao buscar Carros!");
         }
     }
     static async adicionar(req, res) {
         try {
-            res.json(await Carros.create(req.body));
+            res.json(await Carro.create(req.body));
         } catch (error) {
             res.status(400).send("Erro ao adicionar Carros ");
         }
@@ -26,7 +26,7 @@ class CarrosController {
         try {
 
             console.log("Editando id: " + req.body._id);
-            res.json(await Produto.findByIdAndUpdate(req.body._id, req.body));
+            res.json(await Carro.findByIdAndUpdate(req.body._id, req.body));
         } catch (error) {
             res.status(400).send("Erro ao atualizar Carro");
         }
@@ -34,7 +34,7 @@ class CarrosController {
     static async remover(req, res) {
         try {
             console.log("Removendo id: " + req.body._id);
-            res.json(await Produto.findByIdAndRemove(req.body._id));
+            res.json(await Carro.findByIdAndRemove(req.body._id));
         } catch (error) {
             res.status(400).send("Erro ao remover Carro");
         }
@@ -43,4 +43,4 @@ class CarrosController {
 
 
 }
-module.exports = CarrosController;
+module.exports = CarroController;

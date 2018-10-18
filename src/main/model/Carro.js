@@ -2,7 +2,7 @@
 
 const Mongoose = require('mongoose');
 
-class Carros extends Mongoose.Schema {
+class Carro extends Mongoose.Schema {
 
     constructor() {
 
@@ -39,11 +39,11 @@ class Carros extends Mongoose.Schema {
        
         });
 
-        Mongoose.model('Carros', this);
+        Mongoose.model('Carro', this);
     } // constructor
 
 } // class
 
-new Carros();
+new Carro();
 
-module.exports = Carros;
+module.exports = Carro;
