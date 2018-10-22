@@ -32,6 +32,7 @@ class CarroController {
         }
     }
     static async remover(req, res) {
+        console.log(req.body.modelo)
         try {
             console.log("Removendo id: " + req.body._id);
             res.json(await Carro.findByIdAndRemove(req.body._id));

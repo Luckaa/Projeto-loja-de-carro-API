@@ -31,12 +31,7 @@ class Carro extends Mongoose.Schema {
             },
             conservacao: {
                 type: String
-            },
-            
-            obs: {
-                type: String
-            },
-       
+            },      
         });
 
         Mongoose.model('Carro', this);
