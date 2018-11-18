@@ -35,7 +35,7 @@ class Carro extends Mongoose.Schema {
         });
 
         Mongoose.model('Carro', this);
-    } // constructor
+    } // constructornpm
 
 } // class
 

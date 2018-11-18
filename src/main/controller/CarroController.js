@@ -17,6 +17,10 @@ class CarroController {
     }
     static async adicionar(req, res) {
         try {
+            // console.log(req.body);
+            // res.status(200).send({
+            //     body: req.body
+            // })
             res.json(await Carro.create(req.body));
         } catch (error) {
             res.status(400).send("Erro ao adicionar Carros ");
